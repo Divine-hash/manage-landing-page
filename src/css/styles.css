@@ -1,3 +1,9 @@
+/*
+=============================================
+  FONTS
+=============================================
+*/
+
 @font-face {
   font-family: 'Be Vietnam Pro';
   src: url('../assets/fonts/BeVietnamPro-Regular.woff2') format('woff2'),
@@ -25,7 +31,91 @@
   font-display: swap;
 }
 
+
+
+
+
+/*
+=============================================
+  VARIABLES
+=============================================
+*/
+
+:root {
+  --clr-red-300: hsl(12, 88%, 59%);
+  --clr-red-200: hsl(13, 100%, 96%);
+  --clr-red-100: hsl(0, 0%, 98%);
+  --clr-blue-300: hsl(233, 12%, 13%);
+  --clr-blue-200: hsl(228, 39%, 23%);
+  --clr-blue-100: hsl(227, 12%, 61%);
+}
+
+
+
+
+
+/*
+=============================================
+  CSS RESETS
+=============================================
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  text-wrap: balance; /* Tries to make each line of text roughly the same length */
+}
+
+p {
+  text-wrap: pretty; /* Makes the final line of text have at least two words */
+}
+
+@media (prefers-reduced-motions: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+/*
+=============================================
+  BASE STYLES
+=============================================
+*/
+
 body {
   font-family: 'Be Vietnam Pro';
   font-weight: 400;
+  color: var(--clr-blue-100);
 }
