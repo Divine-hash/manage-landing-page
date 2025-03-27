@@ -15,16 +15,40 @@
   </style>
 </head>
 <body>
+  <header class="header">
+    <div class="header-container container">
+      <a href="#">
+        <div class="logo">
+          <img src="./assets/images/logo.svg" alt="">
+        </div>
+      </a>
 
-  Pricing
-  Product
-  About Us
-  Careers
-  Community
+      <button data-id="menu-btn" class="menu-btn"
+        aria-label="Toggle menu"
+        aria-controls="main-nav"
+        aria-expanded="false">
+        <svg width="32" height="32" viewBox="0 0 100 100">
+          <rect x="5" y="15" width="90" height="15"/>
+          <rect x="5" y="43" width="90" height="15" />
+          <rect x="5" y="70" width="90" height="15"/>
+        </svg>
+      </button>
 
-  Get Started
+      <div class="overlay"></div>
+      <nav class="nav" id="main-nav" aria-label="main navigation">
+        <ul data-id="nav-list">
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Comunity</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta-btn d-block">Get Started</a>
+    </div>
+  </header>
 
-  Bring everyone together to build better products.
+  <!-- Bring everyone together to build better products.
 
   Manage makes it simple for software teams to plan day-to-day
   tasks while keeping the larger team goals in view.
@@ -90,12 +114,12 @@
   Updates in your inbox…
   Go
 
-  Copyright 2020. All Rights Reserved
+  Copyright 2020. All Rights Reserved -->
 
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
