@@ -157,8 +157,8 @@ h1 {
 
 @media screen and (min-width: 44em) {
   .wrapper-1 {
-    background-size: 70%;
-    background-position: right -200px top -200px;
+    background-size: 60%;
+    background-position: right -200px top -160px;
   }
 }
 
