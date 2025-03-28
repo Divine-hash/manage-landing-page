@@ -15,44 +15,62 @@
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="header-container container">
-      <a href="#">
-        <div class="logo">
-          <img src="./assets/images/logo.svg" alt="">
+  <div class="wrapper-1">
+    <header class="header">
+      <div class="header__container container">
+        <a href="#">
+          <div class="logo">
+            <img src="./assets/images/logo.svg" alt="">
+          </div>
+        </a>
+
+        <button data-id="menu-btn" class="menu-btn"
+          aria-label="Toggle menu"
+          aria-controls="main-nav"
+          aria-expanded="false">
+          <svg width="32" height="32" viewBox="0 0 100 100">
+            <rect x="5" y="15" width="90" height="15"/>
+            <rect x="5" y="43" width="90" height="15" />
+            <rect x="5" y="70" width="90" height="15"/>
+          </svg>
+        </button>
+
+        <div class="overlay"></div>
+        <nav class="nav" id="main-nav" aria-label="main navigation">
+          <ul data-id="nav-list">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Comunity</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="cta-btn d-block">Get Started</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__image">
+            <img src="./assets/images/illustration-intro.svg" alt="">
+          </div>
+          <div class="hero__content">
+            <div>
+              <h1>Bring everyone together to build better products.</h1>
+              <p>
+                Manage makes it simple for software teams to plan day-to-day
+                tasks while keeping the larger team goals in view.
+              </p>
+            </div>
+            <a class="cta-btn d-block" href="#">Get Started</a>
+          </div>
         </div>
-      </a>
+      </section>
+    </main>
+ </div>
 
-      <button data-id="menu-btn" class="menu-btn"
-        aria-label="Toggle menu"
-        aria-controls="main-nav"
-        aria-expanded="false">
-        <svg width="32" height="32" viewBox="0 0 100 100">
-          <rect x="5" y="15" width="90" height="15"/>
-          <rect x="5" y="43" width="90" height="15" />
-          <rect x="5" y="70" width="90" height="15"/>
-        </svg>
-      </button>
-
-      <div class="overlay"></div>
-      <nav class="nav" id="main-nav" aria-label="main navigation">
-        <ul data-id="nav-list">
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Comunity</a></li>
-        </ul>
-      </nav>
-      <a href="#" class="cta-btn d-block">Get Started</a>
-    </div>
-  </header>
-
-  <!-- Bring everyone together to build better products.
-
-  Manage makes it simple for software teams to plan day-to-day
-  tasks while keeping the larger team goals in view.
-
+  <!--
   Get Started
 
   What’s different about Manage?
