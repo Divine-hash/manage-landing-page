@@ -54,7 +54,7 @@
   --fs-300: calc(40rem / 16);
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 70em) {
   :root {
     --fs-300: calc(56rem / 16);
   }
@@ -98,7 +98,6 @@ input, button, textarea, select {
 
 :where(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance; /* Tries to make each line of text roughly the same length */
-  line-height: 1.2;
 }
 
 p {
@@ -141,6 +140,11 @@ a {
 h1 {
   font-size: var(--fs-300);
   color: var(--clr-blue-200);
+  line-height: 1.2;
+}
+
+:where(h1, h2) {
+  font-weight: 700;
 }
 
 :focus-visible {
@@ -161,6 +165,8 @@ h1 {
     background-position: right -200px top -160px;
   }
 }
+
+
 
 
 
@@ -235,12 +241,11 @@ h1 {
   opacity: 1;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 53em) {
   .menu-btn {
     display: block;
   }
 }
-
 
 /* call to action button */
 .cta-btn {
@@ -349,7 +354,6 @@ h1 {
 
 
 
-
 /*
 =============================================
   HERO
@@ -385,7 +389,7 @@ h1 {
   .hero__container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    place-items: center start;
+    place-items: stretch start;
     justify-content: space-between;
   }
 
@@ -409,5 +413,103 @@ h1 {
 
   .hero__content h1 {
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .hero__container {
+    place-items: center start;
+  }
+}
+
+
+
+
+
+/*
+=============================================
+  ABOUT
+=============================================
+*/
+
+.about {
+  overflow: hidden;
+}
+
+.about h2 {
+  font-size: calc(32rem / 16);
+  margin-bottom: 1rem;
+}
+
+.about :is(h2, p) {
+  text-align: center;
+}
+
+.about :is(h2, dt) {
+  color: var(--clr-blue-200);
+}
+
+.about__intro {
+  padding-bottom: calc(56rem / 16);
+}
+
+.about dl {
+  counter-reset: count;
+}
+
+.about dt {
+  background-color: var(--clr-red-200);
+  padding: 0.5rem 0;
+  border-radius: 30px 0 0 30px;
+  width: 100vw;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.about dd:not(:last-of-type) {
+  margin-bottom: calc(40rem / 16);
+}
+
+.about dt::before {
+  counter-increment: count;
+  content: counter(count, decimal-leading-zero);
+  color: white;
+  background-color: var(--clr-red-300);
+  border-radius: 30px;
+  padding: 0.5rem calc(24rem / 16);
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 44em) {
+  .about {
+    overflow: visible;
+  }
+
+  .about dt {
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .about dt::before {
+    position: absolute;
+    transform: translate(-130%, -20%);
+  }
+
+  .about :is(h2, p) {
+    text-align: left;
+  }
+
+  .about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: calc(128rem / 16);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .about__container {
+    gap: calc(256rem / 16);
   }
 }
