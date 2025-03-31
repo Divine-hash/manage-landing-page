@@ -144,6 +144,10 @@ h1 {
   line-height: 1.2;
 }
 
+h2 {
+  font-size: var(--fs-200);
+}
+
 :where(h1, h2) {
   font-weight: 700;
 }
@@ -438,7 +442,6 @@ h1 {
 }
 
 .about h2 {
-  font-size: var(--fs-200);
   margin-bottom: 1rem;
 }
 
@@ -531,7 +534,6 @@ h1 {
 
 .testimonial h2 {
   color: var(--clr-blue-200);
-  font-size: var(--fs-200);
   text-align: center;
 }
 
