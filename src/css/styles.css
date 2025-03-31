@@ -52,6 +52,7 @@
 
   /* font-size */
   --fs-300: calc(40rem / 16);
+  --fs-200: calc(32rem / 16);
 }
 
 @media screen and (min-width: 70em) {
@@ -437,7 +438,7 @@ h1 {
 }
 
 .about h2 {
-  font-size: calc(32rem / 16);
+  font-size: var(--fs-200);
   margin-bottom: 1rem;
 }
 
@@ -511,5 +512,82 @@ h1 {
 @media screen and (min-width: 60em) {
   .about__container {
     gap: calc(256rem / 16);
+  }
+}
+
+
+
+
+
+/*
+=============================================
+  TESTIMONIALS
+=============================================
+*/
+
+.testimonial {
+  padding: calc(80rem / 16) 0;
+}
+
+.testimonial h2 {
+  color: var(--clr-blue-200);
+  font-size: var(--fs-200);
+  text-align: center;
+}
+
+.testimonial__cta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: calc(40rem / 16);
+}
+
+.swiper-slide {
+  padding: 80px 24px 50px;
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid var(--clr-red-300);
+  opacity: 1;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: var(--clr-red-300);
+}
+
+.card {
+  background-color: var(--clr-red-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(24rem / 16);
+  padding: calc(24rem / 16);
+  height: 290px;
+}
+
+.card__avatar {
+  width: 80px;
+  height: 80px;
+  margin-top: -60px;
+}
+
+.card__name {
+  font-weight: 500;
+  color: var(--clr-blue-200);
+  font-size: 1rem;
+}
+
+.card__testimony {
+  text-align: center;
+}
+
+@media screen and (min-width: 50em) {
+  .swiper-slide {
+    padding: 80px 12px 0;
+  }
+
+  .swiper-pagination {
+    display: none;
   }
 }
