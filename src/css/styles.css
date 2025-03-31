@@ -58,6 +58,7 @@
 @media screen and (min-width: 70em) {
   :root {
     --fs-300: calc(56rem / 16);
+    --fs-200: calc(40rem / 16);
   }
 }
 
@@ -265,6 +266,11 @@ h2 {
 
 .cta-btn:hover {
   background-color: hsl(12, 88%, 65%);
+}
+
+.cta-btn--white {
+  background-color: var(--clr-red-100);
+  color: var(--clr-red-300);
 }
 
 /* navigation */
@@ -591,5 +597,56 @@ h2 {
 
   .swiper-pagination {
     display: none;
+  }
+}
+
+
+
+
+
+/*
+=============================================
+  SIMPLIFY SECTION
+=============================================
+*/
+
+.simplify {
+  background-color: var(--clr-red-300);
+  padding: calc(80rem / 16) 0;
+  background-image: url("../assets/images/bg-tablet-pattern-2.svg");
+  background-repeat: no-repeat;
+  background-position: left -410px top 50px;
+  background-size: 130%;
+}
+
+.simplify h2 {
+  text-align: center;
+  color: var(--clr-red-100);
+}
+
+.simplify__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(40rem / 16);
+}
+
+@media screen and (min-width: 44em) {
+  .simplify {
+    background-image: url("../assets/images/bg-tablet-pattern-2.svg"),
+      url("../assets/images/bg-tablet-pattern-2.svg");
+    background-position: left top 50px, right -550px top -480px;
+    background-size: 50%;
+    padding: calc(48rem / 16);
+  }
+
+  .simplify h2 {
+    text-align: left;
+    max-width: 500px;
+  }
+
+  .simplify__container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
