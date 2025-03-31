@@ -265,13 +265,18 @@ h2 {
   flex-shrink: 0;
 }
 
-.cta-btn:hover {
+.cta-btn:not(.cta-btn--white):hover {
   background-color: hsl(12, 88%, 65%);
 }
 
 .cta-btn--white {
   background-color: var(--clr-red-100);
   color: var(--clr-red-300);
+  transition: color 0.3s;
+}
+
+.cta-btn--white:hover {
+  color: hsl(12, 88%, 80%);
 }
 
 /* navigation */
@@ -687,6 +692,14 @@ h2 {
   gap: calc(24rem / 16);
 }
 
+.footer__nav a {
+  transition: color 0.3s;
+}
+
+.footer__nav a:hover {
+  color: var(--clr-red-300);
+}
+
 .footer__nav li:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -696,6 +709,14 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: calc(56rem / 16);
+}
+
+.footer__logos svg path {
+  transition: fill 0.3s;
+}
+
+.footer__logos svg:hover path {
+  fill: var(--clr-red-300);
 }
 
 .footer__logos ul {
@@ -726,6 +747,7 @@ h2 {
 
 .form :is(input, button) {
   border: none;
+  outline: none;
 }
 
 .form input {
