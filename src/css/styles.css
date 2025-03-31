@@ -636,7 +636,7 @@ h2 {
   .simplify {
     background-image: url("../assets/images/bg-tablet-pattern-2.svg"),
       url("../assets/images/bg-tablet-pattern-2.svg");
-    background-position: left top 50px, right -550px top -480px;
+    background-position: left top -80px, right -550px top -480px;
     background-size: 50%;
     padding: calc(48rem / 16) 0;
   }
